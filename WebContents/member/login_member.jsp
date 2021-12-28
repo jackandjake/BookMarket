@@ -14,8 +14,9 @@
 <br>
 <br>
 <br>
-  <div class="container" align="center">
-     <div class="col-md-4 col-md-offset-4">
+  <div class="container mt-5" align="center">
+        <div class="container" align="center">
+          <div class="col-md-4 col-md-offset-4">
           <h3 class="form-signin-heading">로그인 하세요</h3>
           <%
           	 String error = request.getParameter("error");
@@ -25,6 +26,9 @@
             	  out.print("</div>");
               }
           %> 
+          <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-10">
           <form class="form-signin" action="processLoginMember.jsp" method="post">
               <div class="form-group">
                   <label for="inputUserName" class="sr-only">아이디</label>
@@ -34,9 +38,10 @@
                  <label class="sr-only" for="inputPassword">비밀번호</label>
                  <input type="password" class="form-control" placeholder="비밀번호" name="password" required>
               </div>
-               <button type="button" class="btn btn-primary" type="submit">로그인</button>
-              <button class="btn btn-secondary" type="button" 
-                        onclick="location.href='addMember.jsp'">회원가입</button>                      
+               <button type="button" class="btn btn-outline-primary" type="submit">로그인</button>
+              <button class="btn btn-outline-secondary" type="button" 
+                        onclick="location.href='addMember.jsp'">회원가입</button>  
+              </div>                    
           </form>
      </div>
      <br><br><br><br><br><br><br><br>

@@ -33,9 +33,9 @@
                  <label class="col-sm-7" for="inputPassword">비밀번호 확인</label>
                  <input type="password" class="form-control" placeholder="Confirm Password" name="newPasswordConfirm" required>
               </div>
-              <button class="btn btn btn-lg btn-primary " type="submit">변경하기</button>
-              <button class="btn btn btn-lg btn-secondary " type="reset">초기화</button>
-              <button class="btn btn btn-lg btn-success " type="button" 
+              <button class="btn btn btn-outline-primary " type="submit">변경하기</button>
+              <button class="btn btn btn-outline-secondary " type="reset">초기화</button>
+              <button class="btn btn btn-outline-success " type="button" 
                         onclick="window.close()">닫기</button>
           </form>
      </div>

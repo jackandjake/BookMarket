@@ -6,7 +6,9 @@
 </head>
 <body>
   <jsp:include page="/me.jsp" />
-  <div class="jumbotron">
+  	  <br>
+  	  <hr>
+  	  <br>
       <div class="container">
         <h1 class="display-3">회원 정보</h1>
       </div>
