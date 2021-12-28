@@ -11,17 +11,18 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <jsp:include page="me.jsp"/>
 <hr>
-<br>
-<div class="jumbotron">
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
 	<div class="container" align="center">
-	    <h1 class="display-3">관리자 로그인</h1>
+	    <h2 class="display-3">관리자 로그인</h2>
 	</div>
 </div>
 <br>
 <div class="box" style="user-select: auto;">
  <div class="container" align="center">
   <div class="col-md-4 col-md-offset-4" >
-      <h3 class="form-signin-heading">로그인 하세요</h3>
       <%
       	 String error = request.getParameter("error");
          if(error!=null){
@@ -35,6 +36,7 @@
              <label for="inputUserName" class="sr-only">아이디</label>
              <input type="text" class="form-control" placeholder="아이디" name='j_username' required autofocus>
           </div>
+          <br>
           <div class="form-group">
              <label for="inputPassword" class="sr-only">비밀번호</label>
              <input type="password" class="form-control" placeholder="비밀번호" name='j_password' required>
@@ -48,6 +50,10 @@
   </div>
  </div>
  </div>
+ </div>
+<div class="col-sm-1"></div>
+</div>
+</div>
 </body>
 <%@ include file="/fo.jsp" %>
 </html>

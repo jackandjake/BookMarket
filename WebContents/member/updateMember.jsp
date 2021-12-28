@@ -118,8 +118,8 @@ function changePasswordForm(){
 %>
 <%--데이타 소스 설정 --%>
 <sql:setDataSource  var="dataSource"   
-      url="jdbc:mysql://localhost:3306/WebMarketDB"
-      user="root" password="1234"
+      url="jdbc:mysql://localhost:3306/Book"
+      user="book" password="1234"
       driver="com.mysql.cj.jdbc.Driver" />
 <%-- db에서 sessionId에 해당하는 회원 정보 추출 --%>      
 <sql:query var="resultSet" dataSource="${dataSource}">
@@ -130,7 +130,10 @@ function changePasswordForm(){
 </head>
 <body>
 <jsp:include page="/me.jsp" />
- <div class="jumbotron">
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
     <div class="container">
          <h1 class="display-3">회원 수정</h1>
     </div>
@@ -164,7 +167,7 @@ function changePasswordForm(){
               <label class="col-sm-2">비밀번호</label>
               <div class="col-sm-3">
                    <input name="password" type="password" class="form-control" placeholder="password" required>
-                   <input type="button" value="비밀번호변경"  class="btn btn-success" onclick="changePasswordForm()">
+                   <input type="button" value="비밀번호변경"  class="btn btn-outline-success" onclick="changePasswordForm()">
               </div>
         </div>
         
@@ -178,52 +181,6 @@ function changePasswordForm(){
               <label class="col-sm-2">성명</label>
               <div class="col-sm-3">
                    <input name="name" type="text" class="form-control" placeholder="name" required value="${row.name}">
-              </div>
-        </div>
-        
-        <div class="form-group  row">
-        <label class="col-sm-2">성별</label>
-        <c:set var="gender" value="${row.gender}"/>
-        <div class="col-sm-10">
-          <input name="gender" type="radio" value="남" 
-          <c:if test="${gender.equals('남')}"><c:out value="checked"/></c:if>> 남 
-          <input name="gender" type="radio" value="여" 
-          <c:if test="${gender.equals('여')}"><c:out value="checked"/></c:if>> 여
-        </div>
-      </div>
-      
- <%--      <div class="form-group row">
-        <label class="col-sm-2">성별</label>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="남">
-          <label class="form-check-label" for="inlineRadio1">남자</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="여">
-          <label class="form-check-label" for="inlineRadio2">여자</label>
-        </div>
-      </div>--%>  
-
-        <div class="form-group row">
-              <label class="col-sm-2">생일</label>
-              <div class="col-sm-4">
-                   <input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6" required value="${year}">
-                   <select name="birthmm" required>
-                   	<option value="">월</option>
-                   	<option value="01" <c:if test="${month.equals('01')}"><c:out value="selected"/></c:if>>1</option>
-                   	<option value="02" <c:if test="${month.equals('02')}"><c:out value="selected"/></c:if>>2</option>
-                   	<option value="03" <c:if test="${month.equals('03')}"><c:out value="selected"/></c:if>>3</option>
-                   	<option value="04" <c:if test="${month.equals('04')}"><c:out value="selected"/></c:if>>4</option>
-                   	<option value="05" <c:if test="${month.equals('05')}"><c:out value="selected"/></c:if>>5</option>
-                   	<option value="06" <c:if test="${month.equals('06')}"><c:out value="selected"/></c:if>>6</option>
-                   	<option value="07" <c:if test="${month.equals('07')}"><c:out value="selected"/></c:if>>7</option>
-                   	<option value="08" <c:if test="${month.equals('08')}"><c:out value="selected"/></c:if>>8</option>
-                   	<option value="09" <c:if test="${month.equals('09')}"><c:out value="selected"/></c:if>>9</option>
-                   	<option value="10" <c:if test="${month.equals('10')}"><c:out value="selected"/></c:if>>10</option>
-                   	<option value="11" <c:if test="${month.equals('11')}"><c:out value="selected"/></c:if>>11</option>
-                   	<option value="12" <c:if test="${month.equals('12')}"><c:out value="selected"/></c:if>>12</option>
-                   </select>
-                   <input type="text" name="birthdd" maxlength="2" placeholder="일" size="4"  value="${day}" required>
               </div>
         </div>
         
@@ -246,11 +203,11 @@ function changePasswordForm(){
         <div class="form-group row">
               <label class="col-sm-2">이메일 인증</label>
               <div class="col-sm-3">
-                   <input type="button" value="네이버메일 인증"  class="btn btn-success" onclick="sendEmail()">
+                   <input type="button" value="네이버메일 인증"  class="btn btn-outline-success" onclick="sendEmail()">
                    
                    <input class="form-control" name="cert" type="password" id="cert" value="">
                    <input class="form-control" name="cert_confirm" id="cert_confirm" type="password"value="">
-                   <input type="button" value="확인" class="btn btn-success" onclick="confirm()">
+                   <input type="button" value="확인" class="btn btn-outline-success" onclick="confirm()">
               </div>
         </div>
         
@@ -269,6 +226,29 @@ function changePasswordForm(){
          </div>
        </div>
   
+   <div class="form-group row">
+              <label class="col-sm-2">생일</label>
+              <div class="col-sm-4">
+                   <input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6" required value="${year}">
+                   <select name="birthmm" required>
+                   	<option value="">월</option>
+                   	<option value="01" <c:if test="${month.equals('01')}"><c:out value="selected"/></c:if>>1</option>
+                   	<option value="02" <c:if test="${month.equals('02')}"><c:out value="selected"/></c:if>>2</option>
+                   	<option value="03" <c:if test="${month.equals('03')}"><c:out value="selected"/></c:if>>3</option>
+                   	<option value="04" <c:if test="${month.equals('04')}"><c:out value="selected"/></c:if>>4</option>
+                   	<option value="05" <c:if test="${month.equals('05')}"><c:out value="selected"/></c:if>>5</option>
+                   	<option value="06" <c:if test="${month.equals('06')}"><c:out value="selected"/></c:if>>6</option>
+                   	<option value="07" <c:if test="${month.equals('07')}"><c:out value="selected"/></c:if>>7</option>
+                   	<option value="08" <c:if test="${month.equals('08')}"><c:out value="selected"/></c:if>>8</option>
+                   	<option value="09" <c:if test="${month.equals('09')}"><c:out value="selected"/></c:if>>9</option>
+                   	<option value="10" <c:if test="${month.equals('10')}"><c:out value="selected"/></c:if>>10</option>
+                   	<option value="11" <c:if test="${month.equals('11')}"><c:out value="selected"/></c:if>>11</option>
+                   	<option value="12" <c:if test="${month.equals('12')}"><c:out value="selected"/></c:if>>12</option>
+                   </select>
+                   <input type="text" name="birthdd" maxlength="2" placeholder="일" size="4"  value="${day}" required>
+              </div>
+        </div>
+  
   <div class="form-group row">
              <label class="col-sm-2">우편번호</label>
              <div class="col-sm-3">
@@ -279,7 +259,7 @@ function changePasswordForm(){
           <div class="form-group row">
              <label class="col-sm-2">도로명주소</label>
              <div class="col-sm-5">
-                 <input name="roadAddress" id="roadAddress"  type="text" class="form-control" placeholder="도로명주소" value="${row.roadAddress}" required>
+                 <input name="roadAddress" id="roadAddress" type="text" class="form-control" placeholder="도로명주소" value="${row.roadAddress}" required>
              </div>
          </div>
          <div class="form-group row">
@@ -295,18 +275,12 @@ function changePasswordForm(){
                  <input name="detailAddress"  id="detailAddress" type="text" class="form-control" placeholder="상세주소" value="${row.detailAddress}" required>
              </div>
          </div>
-         <div class="form-group row">
-             <label class="col-sm-2">참고항목</label>
-             <div class="col-sm-3">
-                 <input name="extraAddress"id="extraAddress" type="text" class="form-control" placeholder="참고항목" value="${row.extraAddress}" required>
-             </div>
-         </div>
-       
+        
        <div class="form-gorup row">
           <div class="col-sm-offset-2 col-sm-10">
-               <input type="submit" class="btn btn-primary" value="수정">
-               <input type="reset"  class="btn btn-warning" value="취소" onclick="reset()">
-               <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">회원탈퇴</button>
+               <input type="submit" class="btn btn-outline-primary" value="수정">
+               <input type="reset"  class="btn btn-outline-secondary" value="취소" onclick="reset()">
+               <button class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal">회원탈퇴</button>
           </div>
        </div>
        </form>
@@ -327,11 +301,15 @@ function changePasswordForm(){
         탈퇴하시겠습니까?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="location.href='deleteMember.jsp'">회원탈퇴</button>
+        <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-outline-danger" onclick="location.href='deleteMember.jsp'">회원탈퇴</button>
       </div>
     </div>
   </div>
+</div>
+</div>
+<div class="col-sm-1"></div>
+</div>
 </div>
 
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

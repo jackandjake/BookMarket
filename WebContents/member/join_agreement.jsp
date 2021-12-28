@@ -29,9 +29,12 @@ location.href="../wel.jsp";}
 </head>
 <body>
  <jsp:include page="/me.jsp"/>
+ <hr>
+ <div class="container mt=5">
+ <div class="row">
+ <div class="col-sm-1"></div>
+ <div class="col-sm-10">
     <br>
-    <hr>
-   <br>
   <div class="container">
   <div class="text-center">
   <tr>
@@ -269,6 +272,10 @@ location.href="../wel.jsp";}
 </div>
 </div>
 <br>
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
 <%@ include file="/fo.jsp" %>
 </body>
 </html>
