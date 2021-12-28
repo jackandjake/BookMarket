@@ -49,4 +49,5 @@
  </div>
  </div>
 </body>
+<%@ include file="/fo.jsp" %>
 </html>

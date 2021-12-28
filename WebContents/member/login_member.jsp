@@ -12,6 +12,8 @@
 <jsp:include page="/me.jsp"/>
 <hr>
 <br>
+<br>
+<br>
   <div class="container" align="center">
      <div class="col-md-4 col-md-offset-4">
           <h3 class="form-signin-heading">로그인 하세요</h3>
@@ -37,7 +39,8 @@
                         onclick="location.href='addMember.jsp'">회원가입</button>                      
           </form>
      </div>
-     <%@ include file="/fo.jsp" %>
+     <br><br><br><br><br><br><br><br>
   </div>
 </body>
+<%@ include file="/fo.jsp" %>
 </html>

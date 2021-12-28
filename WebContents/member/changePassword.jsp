@@ -7,15 +7,12 @@
 <!DOCTYPE html><html><head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
-<title>비밀번호 변경</title>
+<title>비밀번호 변경하기</title>
 </head>
 <body>
  <jsp:include page="/me.jsp"/>
- <div class="jumbotron">
-     <div class="container">
-         <h1 class="display-3">비밀번호 변경</h1>
-     </div>
- </div>
+<br>
+ <hr>
   <div class="container" align="center">
      <div class="col-md-4 col-md-offset-4">
           <h3 class="form-signin-heading">Change Password</h3>
@@ -30,18 +27,19 @@
               </div>
                <div class="form-group">
                  <label class="col-sm-7" for="inputPassword">새로운 비밀번호</label>
-                 <input type="password" class="form-control" placeholder="Password" name="newPassword" required>
+                 <input type="password" class="form-control" placeholder="New Password" name="newPassword" required>
               </div>
                <div class="form-group">
                  <label class="col-sm-7" for="inputPassword">비밀번호 확인</label>
-                 <input type="password" class="form-control" placeholder="Password" name="newPasswordConfirm" required>
+                 <input type="password" class="form-control" placeholder="Confirm Password" name="newPasswordConfirm" required>
               </div>
-              <button class="btn btn btn-lg btn-success btn-block" type="submit">변경하기</button>
-              <button class="btn btn btn-lg btn-secondary btn-block" type="reset">초기화</button>
-              <button class="btn btn btn-lg btn-primary btn-block" type="button" 
+              <button class="btn btn btn-lg btn-primary " type="submit">변경하기</button>
+              <button class="btn btn btn-lg btn-secondary " type="reset">초기화</button>
+              <button class="btn btn btn-lg btn-success " type="button" 
                         onclick="window.close()">닫기</button>
           </form>
      </div>
   </div>
 </body>
+<%@ include file="/fo.jsp" %>
 </html>
