@@ -130,7 +130,7 @@ function confirm(){
  <jsp:include page="/me.jsp"/>
  <br>
  <div class="container mt-5">
- <div class="row"></div>
+ <div class="row">
  <div class="col-sm-10">
       <div class="container">
       	<h1 class="display-3">회원가입</h1>
@@ -273,6 +273,7 @@ function confirm(){
  </div>   
  </div>
  <div class="col-sm-1"></div>
+ </div>
  </div>
  </div>
     <%@ include file="/fo.jsp" %>

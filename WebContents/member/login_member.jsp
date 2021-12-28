@@ -15,6 +15,9 @@
 <br>
 <br>
   <div class="container mt-5" align="center">
+  <div class="row">
+  <div class="col-sm-1"></div>
+  <div class="col-sm-10">
         <div class="container" align="center">
           <div class="col-md-4 col-md-offset-4">
           <h3 class="form-signin-heading">로그인 하세요</h3>
@@ -26,9 +29,6 @@
             	  out.print("</div>");
               }
           %> 
-          <div class="row">
-          <div class="col-sm-1"></div>
-          <div class="col-sm-10">
           <form class="form-signin" action="processLoginMember.jsp" method="post">
               <div class="form-group">
                   <label for="inputUserName" class="sr-only">아이디</label>
@@ -46,6 +46,10 @@
      </div>
      <br><br><br><br><br><br><br><br>
   </div>
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
 </body>
 <%@ include file="/fo.jsp" %>
 </html>

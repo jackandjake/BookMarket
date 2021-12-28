@@ -276,6 +276,7 @@ location.href="../wel.jsp";}
 <div class="col-sm-1"></div>
 </div>
 </div>
+</div>
 <%@ include file="/fo.jsp" %>
 </body>
 </html>
