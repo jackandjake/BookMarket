@@ -37,6 +37,7 @@
                         onclick="location.href='addMember.jsp'">회원가입</button>                      
           </form>
      </div>
+     <%@ include file="/fo.jsp" %>
   </div>
 </body>
 </html>

@@ -40,7 +40,7 @@
              <input type="password" class="form-control" placeholder="비밀번호" name='j_password' required>
           </div>
           <br>
-          <button type="button" class="btn btn-primary" type="submit">로그인</button>
+          <button class="btn btn-primary" type="submit">로그인</button>
           <div class="save" style="user-select: auto;">
            <input type="checkbox" class="checkbox" id="saveId" name="saveId" value="y" checked="" style="user-select: auto;">
            <label for="saveId" class="" style="user-select: auto;">아이디 저장</label>

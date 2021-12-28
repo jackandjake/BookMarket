@@ -252,8 +252,7 @@ function confirm(){
                  <input name="detailAddress"  id="detailAddress" type="text" class="form-control" placeholder="상세주소" required>
              </div>
          </div>
-         <div class="form-group row">
-       
+ 
        <div class="form-gorup row">
           <div class="col-sm-offset-2 col-sm-10">
                <input type="submit" class="btn btn-primary" value="등록">
@@ -261,7 +260,10 @@ function confirm(){
           </div>
        </div>
     </form>
-
+    <hr>
+    <%@ include file="/fo.jsp" %>
+    <br>
+  
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
