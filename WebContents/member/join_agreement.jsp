@@ -12,20 +12,17 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <script type="text/javascript">
 
 function chk(){
- var req = document.form.req.checked;
- var num = 0;
- if(req == true){
-  num = 1;
- }
- if(num==1){
-  document.form.submit();
+ var req = document.getElementById('req').checked;
+
+ if(req){
+  location.href='addMember.jsp'
  }else{
   alert("개인정보 약관에 동의하셔야 합니다.");
  }
 }
 function nochk(){
  alert("동의하지 않으면 가입하실 수 없습니다");
-location.href="/wel.jsp";}
+location.href="../wel.jsp";}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>회원가입</title>
@@ -68,13 +65,13 @@ location.href="/wel.jsp";}
 - 생성정보 수집 툴을 통한 수집
    </textarea>
    <br>
-   <input type="checkbox" name="req"> 개인정보 수집 및 이용에 동의합니다.
+   <input type="checkbox" name="req" id="req"> 개인정보 수집 및 이용에 동의합니다.
    </td>
   </tr>
   <tr>
    <td align="center" valign="top">
-    <input type="button" button class="btn btn-primary" value="동의" onclick="chk()"/>&nbsp;&nbsp;&nbsp;
-    <input type="button" button class="btn btn-secondary" value="동의하지 않습니다" onclick="nochk()"/>
+    <input type="button"  class="btn btn-primary" value="동의" onclick="chk()"/>&nbsp;&nbsp;&nbsp;
+    <input type="button"  class="btn btn-secondary" value="동의하지 않습니다" onclick="nochk()"/>
    </td>
   </tr>
  </table>
