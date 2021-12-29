@@ -143,7 +143,12 @@ ${sessionId}
      <c:set var="mail" value="${row.cmail}"/>
      <c:set var="mail1" value="${cmail.split('@')[0]}"/>
      <c:set var="mail2" value="${cmail.split('@')[1]}"/>
-    
+     
+     <c:set var="birth" value="${row.cbday}"/>
+     <c:set var="year" value="${cbday.split('/')[0]}"/>
+     <c:set var="month" value="${cbday.split('/')[1]}"/>
+     <c:set var="day" value="${cbday.split('/')[2]}"/>
+     
      <c:set var="phone" value="${row.phone}"/>
      <c:set var="phone1" value="${cphone.split('-')[0]}"/>
      <c:set var="phone2" value="${cphone.split('-')[1]}"/>
@@ -187,18 +192,18 @@ ${sessionId}
                    <input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6" required>
                    <select name="birthmm" required>
                    	<option value="">월</option>
-                   	<option value="01">1</option>
-                   	<option value="02">2</option>
-                   	<option value="03">3</option>
-                   	<option value="04">4</option>
-                   	<option value="05">5</option>
-                   	<option value="06">6</option>
-                   	<option value="07">7</option>
-                   	<option value="08">8</option>
-                   	<option value="09">9</option>
-                   	<option value="10">10</option>
-                   	<option value="11">11</option>
-                   	<option value="12">12</option>
+                   <option value="01" <c:if test="${month.equals('01')}"><c:out value="selected"/></c:if>>1</option>
+                   	<option value="02" <c:if test="${month.equals('02')}"><c:out value="selected"/></c:if>>2</option>
+                   	<option value="03" <c:if test="${month.equals('03')}"><c:out value="selected"/></c:if>>3</option>
+                   	<option value="04" <c:if test="${month.equals('04')}"><c:out value="selected"/></c:if>>4</option>
+                   	<option value="05" <c:if test="${month.equals('05')}"><c:out value="selected"/></c:if>>5</option>
+                   	<option value="06" <c:if test="${month.equals('06')}"><c:out value="selected"/></c:if>>6</option>
+                   	<option value="07" <c:if test="${month.equals('07')}"><c:out value="selected"/></c:if>>7</option>
+                   	<option value="08" <c:if test="${month.equals('08')}"><c:out value="selected"/></c:if>>8</option>
+                   	<option value="09" <c:if test="${month.equals('09')}"><c:out value="selected"/></c:if>>9</option>
+                   	<option value="10" <c:if test="${month.equals('10')}"><c:out value="selected"/></c:if>>10</option>
+                   	<option value="11" <c:if test="${month.equals('11')}"><c:out value="selected"/></c:if>>11</option>
+                   	<option value="12" <c:if test="${month.equals('12')}"><c:out value="selected"/></c:if>>12</option>
                    </select>
                    <input type="text" name="birthdd" maxlength="2" placeholder="일" size="4" required>
               </div>
