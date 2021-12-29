@@ -4,8 +4,8 @@
 <!DOCTYPE html><html><head>
 <script>
 function selectDomain(obj){
-	document.newMember.mail2.value=obj.value;
-	if(obj.value=="") document.newMember.mail2.focus();
+	document.newMember.cmail2.value=obj.value;
+	if(obj.value=="") document.newMember.cmail2.focus();
 }
 </script> 
 <script>
@@ -69,12 +69,21 @@ function checkForm(){
 		form.email2.value='';
 		return false;	
 	}
-	
 	return true;
 }
 </script>
 
-<!--   <script>
+<script>
+function sendEmail(){
+	var mailId = document.newMember.mail1.value+'@'+document.newMember.mail2.value;
+	var emailPassword =prompt("이메일 비번을 입력하세요",'');
+if(emailPassword.length>0){	
+		window.open("certMail.jsp?email="+mailId+"&emailPassword="+emailPassword);
+	  }
+}
+</script>
+
+<script>
 글로벌 변수 
 var isConfirm=false;
 function confirm(){
@@ -91,7 +100,7 @@ function confirm(){
 		console.log('인증이 완료되었습니다.','isConfirm:',isConfirm);
 	}
 }
-</script> -->
+</script>
 
 <script>
 function changePasswordForm(){
@@ -112,8 +121,7 @@ $(document).ready(function(){
 <%
 	String sessionId = (String)session.getAttribute("sessionId");
 %>
-<%=sessionId %>
-${sessionId}
+
 <%--데이타 소스 설정 --%>
 <sql:setDataSource  var="dataSource"   
       url="jdbc:mysql://localhost:3306/book"
@@ -214,7 +222,7 @@ ${sessionId}
              <div class="col-sm-10">
                 <input type="text" name="cmail1" maxlength="50" required value="${cmail1}"> @
                 <input type="text" name="cmail2" maxlength="50" required value="${cmail2}">
-                 <select name="mail2_select" onchange="selectDomain(this)">
+                   <select name="cmail2_select" onchange="selectDomain(this)">
                     <option disabled="disabled" selected="selected">선택</option>
                     <option>naver.com</option>
                     <option>kakao.com</option>
