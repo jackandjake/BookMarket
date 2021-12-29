@@ -9,7 +9,6 @@
   String id=request.getParameter("id");
   String name=request.getParameter("name");
   String password=request.getParameter("password");
-  String gender=request.getParameter("gender");
   String year=request.getParameter("birthyy");
   String month=request.getParameter("birthmm");
   String day=request.getParameter("birthdd");
@@ -21,6 +20,7 @@
   String phone2 = request.getParameter("phone2");
   String phone3 = request.getParameter("phone3");
   String phone = phone1+"-"+phone2+"-"+phone3;
+  /* String zipCode = request.getParameter("zipcode"); */
   String roadAddress = request.getParameter("roadAddress");
   String jibunAddress= request.getParameter("jibunAddress");
   String detailAddress = request.getParameter("detailAddress");
@@ -45,15 +45,15 @@
 <%=extraAddress %><br> --%>
 <%-- 데이터 셋 설정 --%>
 <sql:setDataSource var="dataSource"  
-     url="jdbc:mysql://localhost:3306/book" 
+     url="jdbc:mysql://localhost:3306/Book" 
      driver="com.mysql.cj.jdbc.Driver" user="book" password="1234" />
      
 <%-- 입력처리 --%>     
 <sql:update dataSource="${dataSource}" var="resultSet">
-update member set name=?,birth=?,mail=?,phone=?, 
-       roadAddress=?, jibunAddress=?, detailAddress=?, extraAddress=?
-   	   where id=?
+insert into member values (?,?,?,?,?,?,?,?,?,?,?,?,?)
+<sql:param value="<%=id%>"/>
 <sql:param value="<%=name %>"/>
+<sql:param value="<%=password %>"/>
 <sql:param value="<%=birth %>"/>
 <sql:param value="<%=mail %>"/>
 <sql:param value="<%=phone %>"/>
@@ -61,10 +61,10 @@ update member set name=?,birth=?,mail=?,phone=?,
 <sql:param value="<%=jibunAddress %>"/>
 <sql:param value="<%=detailAddress %>"/>
 <sql:param value="<%=extraAddress %>"/>
-<sql:param value="<%=id%>"/>
+<sql:param value="<%=timestamp %>"/>
 </sql:update>     
 
 <!-- 입력후 페이지 이동 처리, response.sendRedirect -->
 <c:if test="${resultSet >=1}">
-   <c:redirect url="resultMember.jsp?msg=0"/>
+   <c:redirect url="resultMember.jsp?msg=1"/>
 </c:if>

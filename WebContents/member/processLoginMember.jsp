@@ -10,13 +10,13 @@
 %>
 <%--데이타 셋 설정 --%>
 <sql:setDataSource  var="dataSource"   
-      url="jdbc:mysql://localhost:3306/Book"
+      url="jdbc:mysql://localhost:3306/book"
       user="book" password="1234"
       driver="com.mysql.cj.jdbc.Driver" />
       
 <%--id,password 에 맞는 회원정보를 db에서 추출 --%>
 <sql:query dataSource="${dataSource}" var="resultSet" >
-  select * from member where id=? and password=?
+  select * from member where cid=? and cpw=?
   <sql:param value="<%=id%>" />
   <sql:param value="<%=password %>"/>
 </sql:query>
