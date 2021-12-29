@@ -129,14 +129,16 @@ function changePasswordForm(){
 <title>회원 수정</title>
 </head>
 <body>
-<jsp:include page="/me.jsp" />
+<%@ include file="../me.jsp" %>
 <div class="container mt-5">
 <div class="row">
 <div class="col-sm-1"></div>
 <div class="col-sm-10">
-    <div class="container">
-         <h1 class="display-3">회원 수정</h1>
-    </div>
+  <h2 id="company"><b>회원수정</b></h2>
+  <hr>
+<pre>
+
+</pre>
  </div>
   <c:forEach var="row" items="${resultSet.rows}">
      <c:set var="mail" value="${row.mail}"/>
@@ -366,5 +368,10 @@ function changePasswordForm(){
         }).open();
     }
 </script>
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
+<%@ include file="../fo.jsp" %>
 </body>
 </html>

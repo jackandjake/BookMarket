@@ -10,9 +10,16 @@
 <title>비밀번호 변경하기</title>
 </head>
 <body>
- <jsp:include page="/me.jsp"/>
-<br>
- <hr>
+<%@ include file="../me.jsp" %>
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+  <h2 id="company"><b>비밀번호 변경</b></h2>
+  <hr>
+<pre>
+
+</pre>
 <div class="container mt-5">
 <div class="row">
 <div class="col-sm-1"></div>
@@ -48,7 +55,11 @@
 <div class="col-sm-1"></div>
 </div>
 </div>
-</div>  
+<pre>
+
+
+
+</pre>
+<%@ include file="../fo.jsp" %> 
 </body>
-<%@ include file="/fo.jsp" %>
 </html>

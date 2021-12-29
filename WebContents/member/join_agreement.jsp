@@ -28,13 +28,15 @@ location.href="../wel.jsp";}
 <title>회원가입</title>
 </head>
 <body>
- <jsp:include page="/me.jsp"/>
- <hr>
- <div class="container mt=5">
- <div class="row">
- <div class="col-sm-1"></div>
- <div class="col-sm-10">
-    <br>
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+  <h2 id="company"><b>약관동의</b></h2>
+  <hr>
+<pre>
+
+</pre>
   <div class="container">
   <div class="text-center">
   <tr>
@@ -276,7 +278,6 @@ location.href="../wel.jsp";}
 <div class="col-sm-1"></div>
 </div>
 </div>
-</div>
-<%@ include file="/fo.jsp" %>
+<%@ include file="../fo.jsp" %>
 </body>
 </html>

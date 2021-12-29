@@ -127,19 +127,18 @@ function confirm(){
 <title>회원 가입</title>
 </head>
 <body>
- <jsp:include page="/me.jsp"/>
- <br>
- <div class="container mt-5">
- <div class="row">
- <div class="col-sm-10">
-      <div class="container">
-      	<h1 class="display-3">회원가입</h1>
-      </div>
-  </div>
+ <%@ include file="../me.jsp" %>
+<div class="container mt-5">
+<div class="row">
+<div class="col-sm-1"></div>
+<div class="col-sm-10">
+  <h2 id="company"><b>회원가입</b></h2>
   <hr>
-  <br>
+<pre>
+
+</pre>
+
   <div class="container">
- 
     <form name="newMember" class="form-horizontal" action="processAddMember.jsp" 
                 method="post" onsubmit="return checkForm()"> 
         <div class="form-group row">
@@ -276,8 +275,14 @@ function confirm(){
  </div>
  </div>
  </div>
-    <%@ include file="/fo.jsp" %>
-    <br>
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
+<pre>
+
+</pre>
+<%@ include file="../fo.jsp" %>
   
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
