@@ -26,6 +26,8 @@ location.href="../wel.jsp";}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>회원가입</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 <div class="container mt-5">
