@@ -2,11 +2,11 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="/dbconn.jsp" %>    
+<%@ include file="../dbconn.jsp" %>    
 <%
-	String id = request.getParameter("id");
+	String id = request.getParameter("cid");
      
-    String sql="select count(*) from member where id=?";
+    String sql="select count(*) from member where cid=?";
     PreparedStatement pstmt = conn.prepareStatement(sql);
     pstmt.setString(1,id);
     //id에 해당하는 결과가 없으면 0이 리턴, 있으면 1이 리턴
@@ -16,8 +16,8 @@
 %>
 <script>
 alert('이미 존재하는 id입니다.');
- opener.newMember.id.value='';
- opener.newMember.id.focus();
+ opener.newMember.cid.value='';
+ opener.newMember.cid.focus();
  self.close();/*자신을 닫는 함수  */
 </script>
 <%}else{%>

@@ -144,15 +144,22 @@ function confirm(){
         <div class="form-group row">
               <label class="col-sm-2">아이디</label>
               <div class="col-sm-3">
-                   <input name="id" type="text" class="form-control" placeholder="id" required>
+                   <input name="cid" type="text" class="form-control" placeholder="id" required>
                     <input type="button" value="아이디 중복검사"  class="btn btn-outline-success" onclick="idChk()">
+              </div>
+        </div>
+        
+        <div class="form-group row">
+              <label class="col-sm-2">성명</label>
+              <div class="col-sm-3">
+                   <input name="cname" type="text" class="form-control" placeholder="name" required>
               </div>
         </div>
         
         <div class="form-group row">
               <label class="col-sm-2">비밀번호</label>
               <div class="col-sm-3">
-                   <input name="password" type="password" class="form-control" placeholder="password" required>
+                   <input name="cpw" type="password" class="form-control" placeholder="password" required>
               </div>
         </div>
         
@@ -162,55 +169,8 @@ function confirm(){
                    <input name="password_confirm" type="password" class="form-control" placeholder="password confirm" required>
               </div>
         </div>
-        <div class="form-group row">
-              <label class="col-sm-2">성명</label>
-              <div class="col-sm-3">
-                   <input name="name" type="text" class="form-control" placeholder="name" required>
-              </div>
-        </div>
-                      
-       <div class="form-group row">
-             <label class="col-sm-2">이메일</label>
-             <div class="col-sm-10">
-                <input type="text" name="mail1" maxlength="50" required> @
-                <input type="text" name="mail2" maxlength="50" required>
-                 <select name="mail2_select" onchange="selectDomain(this)">
-                    <option disabled="disabled" selected="selected">선택</option>
-                    <option>naver.com</option>
-                    <option>daum.net</option>
-                    <option>gmail.com</option>
-                    <option>nate.com</option>
-                    <option value="">직접입력</option>
-                </select>
-             </div>
-       </div>
-       
-        <div class="form-group row">
-              <label class="col-sm-2">이메일 인증</label>
-              <div class="col-sm-3">
-                   <input type="button" value="네이버메일 인증"  class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
-                   <input class="form-control" name="cert" type="password" id="cert" value="" readonly>
-                   <input class="form-control" name="cert_confirm" id="cert_confirm" type="password" value="">
-                   <input type="button" value="확인" class="btn btn-outline-success" onclick="confirm()">
-              </div>
-        </div>
-        
-       <div class="form-group row">
-         <label class="col-sm-2">전화번호</label>
-         <div class="col-sm-5">
-               <select name="phone1" required>
-		              <option value="010" selected>010</option>
-		              <option value="011">011</option>
-		              <option value="016">016</option>
-		              <option value="017">017</option>
-		              <option value="019">019</option>		              
-		           </select>
-				- <input maxlength="4" size="4" name="phone2" required> -
-				<input maxlength="4" size="4" name="phone3" required>
-         </div>
-         
-       </div>
-        <div class="form-group row">
+      
+         <div class="form-group row">
               <label class="col-sm-2">생일</label>
               <div class="col-sm-4">
                    <input type="text" name="birthyy" maxlength="4" placeholder="년(4자)" size="6" required>
@@ -231,8 +191,50 @@ function confirm(){
                    </select>
                    <input type="text" name="birthdd" maxlength="2" placeholder="일" size="4" required>
               </div>
+        </div>          
+                           
+       <div class="form-group row">
+             <label class="col-sm-2">이메일</label>
+             <div class="col-sm-10">
+                <input type="text" name="cmail1" maxlength="50" required> @
+                <input type="text" name="cmail2" maxlength="50" required>
+                 <select name="mail2_select" onchange="selectDomain(this)">
+                    <option disabled="disabled" selected="selected">선택</option>
+                    <option>naver.com</option>
+                    <option>kakao.com</option>
+                    <option>gmail.com</option>
+                    <option>nate.com</option>
+                    <option value="">직접입력</option>
+                </select>
+             </div>
+       </div>
+       
+        <div class="form-group row">
+              <label class="col-sm-2">이메일 인증</label>
+              <div class="col-sm-3">
+                   <input type="button" value="네이버메일 인증"  class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
+                   <input class="form-control" name="cert" type="password" id="cert" value="" readonly>
+                   <input class="form-control" name="cert_confirm" id="cert_confirm" type="password" value="">
+                   <input type="button" value="확인" class="btn btn-outline-success" onclick="confirm()">
+              </div>
         </div>
-
+        
+       <div class="form-group row">
+         <label class="col-sm-2">전화번호</label>
+         <div class="col-sm-5">
+               <select name="cphone1" required>
+		              <option value="010" selected>010</option>
+		              <option value="011">011</option>
+		              <option value="016">016</option>
+		              <option value="017">017</option>
+		              <option value="019">019</option>		              
+		           </select>
+				- <input maxlength="4" size="4" name="cphone2" required> -
+				<input maxlength="4" size="4" name="cphone3" required>
+         </div>
+         
+       </div>
+ 
   <div class="form-group row">
              <label class="col-sm-2">우편번호</label>
              <div class="col-sm-3">
@@ -243,20 +245,20 @@ function confirm(){
           <div class="form-group row">
              <label class="col-sm-2">도로명주소</label>
              <div class="col-sm-3">
-                 <input name="roadAddress" id="roadAddress"  type="text" class="form-control" placeholder="도로명주소" required>
+                 <input name="roadaddr" id="roadAddress"  type="text" class="form-control" placeholder="도로명주소" required>
              </div>
          </div>
          <div class="form-group row">
              <label class="col-sm-2">지번주소</label>
              <div class="col-sm-3">
-                 <input name="jibunAddress" id="jibunAddress"  type="text" class="form-control" placeholder="지번주소" required>
+                 <input name="jibuncaddr" id="jibunAddress"  type="text" class="form-control" placeholder="지번주소" required>
              </div>
          </div>
          <span id="guide" style="color:#999;display:none"></span>
          <div class="form-group row">
              <label class="col-sm-2">상세주소</label>
              <div class="col-sm-3">
-                 <input name="detailAddress"  id="detailAddress" type="text" class="form-control" placeholder="상세주소" required>
+                 <input name="detailcaddr"  id="detailAddress" type="text" class="form-control" placeholder="상세주소" required>
              </div>
          </div>
  
@@ -270,12 +272,7 @@ function confirm(){
        <hr>
     </form>
  </div>   
- </div>
- <div class="col-sm-1"></div>
- </div>
- </div>
- </div>
-</div>
+
 <div class="col-sm-1"></div>
 </div>
 </div>

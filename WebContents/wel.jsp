@@ -34,17 +34,17 @@
   <!-- The slideshow/carousel -->
   <div class="carousel-inner" align="center" >
     <div class="carousel-item active">
-      <img src="/resources/images/test_banner1.png" alt="banner1" class="d-block" style="width:100%">
+      <img src="/Image/test_banner1.png" alt="banner1" class="d-block" style="width:100%">
       <div class="carousel-caption">
       </div>
     </div>
     <div class="carousel-item">
-      <img src="/resources/images/test_banner2.png" alt="banner1" class="d-block" style="width:100%">
+      <img src="/Image/test_banner2.png" alt="banner1" class="d-block" style="width:100%">
       <div class="carousel-caption">
       </div> 
     </div>
     <div class="carousel-item">
-      <img src="/resources/images/test_banner3.png" alt="banner1" class="d-block" style="width:100%">
+      <img src="/Image/test_banner3.png" alt="banner1" class="d-block" style="width:100%">
       <div class="carousel-caption">
       </div>  
     </div>
