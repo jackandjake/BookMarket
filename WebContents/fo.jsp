@@ -55,13 +55,13 @@
 <div class="container mt-3" id="footer">
  <div class="row">
   <div class="col-sm-3" align="left">
-   <a href="http://localhost:8080/BookMarket/wel.jsp"><img src="/Image/baekdoo_full.PNG" alt="home" width="100%" height="100%" ></a>
+   <a href="http://localhost:8080/BookMarket/wel.jsp"><img src="/Image/star.png" alt="home" width="100%" height="100%" ></a>
   </div>
   <div class="col-sm-7">
-   <p><b>백두도서</b> 서울 강남구 테헤란로 7길 7(역삼동 에스코빌딩 6층)</p>
-   <p>대표자 : 정현경 | 사업자등록번호 : 220-90-07535 | 통신판매번호 : 제 강남-8062호</p>
-   <p>TEL : 02-561-1911 | FAX : 02-538-2613 | 메일 : einfo1@choongang.co.kr</p>
-   <p>개인정보관리책임자:유창현, Copyright &copy; 1969 by CHOONGANG INSTITUTE, All Rights Reserved. </p>
+   <p><b>왕별도서</b> 서울 강남구 테헤란로 7길 7(역삼동 에스코빌딩 6층)</p>
+   <p>대표자 : 왕별이 | 사업자등록번호 : 220-90-07535 | 통신판매번호 : 제 강남-1004호</p>
+   <p>TEL : 02-561-1111 | FAX : 02-538-1111 | 메일 : einfo1@choongang.co.kr</p>
+   <p>개인정보관리책임자:유영현, Copyright &copy; 1969 by CHOONGANG INSTITUTE, All Rights Reserved. </p>
   </div>
    <div class="col-sm-2" align="right">
      <p><a class="btn btn-outline-light text-dark mb-5 mt-5" href="#top" id="top">top</a></p>

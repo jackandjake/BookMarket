@@ -21,7 +21,7 @@
 
 </pre>
 <p>안녕하세요
-<p>백두도서 쇼핑몰입니다.
+<p>왕별도서 쇼핑몰입니다.
 <p>프로그램 개발 관련 도서를 취급하는 도서 쇼핑몰입니다.
 <p>앞으로 많은 성원 부탁드립니다.
 <p><img src="/Image/place.PNG" class="rounded mx-auto d-block" alt="company" width="542px" height="390px">
@@ -29,6 +29,9 @@
 <div class="col-sm-1"></div>
 </div>
 </div>
+<pre>
+
+</pre>
 <%@ include file="../fo.jsp" %>
 </body>
 </html>

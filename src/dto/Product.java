@@ -1,16 +1,15 @@
 package dto;
 
-
 import java.io.Serializable;
 
 public class Product implements Serializable {
 	//원본여부확인번호
 	private static final long serialVersionUID = 1L;
-	
+
 	private String productId; //ISBN
 	private String pname; //도서 제목
 	private String pwriter; //작가
-	private int unitPrice; //판매가
+	private Integer unitPrice; //판매가
 	private String category; //카테고리
 	private String publisher; //출판사
 	private String publishDate; //출판일자
@@ -18,15 +17,15 @@ public class Product implements Serializable {
 	private long unitsInStock; //재고 수
 	private String filename; //이미지 파일명
 	private int quantity; //장바구니에 담은 갯수
-	
+
 	//생성자
 	public Product() {}
-	public Product(String productId,String pname, Integer unitPrice) {
+	public Product(String productId, String pname, Integer unitPrice) {
 		this.pname = pname;
 		this.productId = productId;
 		this.unitPrice = unitPrice;
 	}
-	
+
 	//getters/setters
 	public String getProductId() {
 		return productId;
@@ -46,10 +45,10 @@ public class Product implements Serializable {
 	public void setPwriter(String pwriter) {
 		this.pwriter = pwriter;
 	}
-	public int getUnitPrice() {
+	public Integer getUnitPrice() {
 		return unitPrice;
 	}
-	public void setUnitPrice(int unitPrice) {
+	public void setUnitPrice(Integer unitPrice) {
 		this.unitPrice = unitPrice;
 	}
 	public String getCategory() {
@@ -93,7 +92,6 @@ public class Product implements Serializable {
 	}
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
-	}	
-	
+	}
 
 }

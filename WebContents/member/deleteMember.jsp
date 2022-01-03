@@ -18,5 +18,5 @@
 
 <c:if test="${resultSet>=1}">
      <c:import var="url" url="logoutMember.jsp"/>
-     <c:redirect url="resultMember.jsp"/>
+     <c:redirect url="resultMember.jsp?msg=3"/>
 </c:if>

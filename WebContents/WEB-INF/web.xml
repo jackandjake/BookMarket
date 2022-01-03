@@ -2,12 +2,7 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
   <display-name>BookMarket</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>wel.jsp</welcome-file>
   </welcome-file-list>
   <security-role>
     <description></description>
@@ -17,7 +12,8 @@
     <display-name>BookMarket</display-name>
     <web-resource-collection>
       <web-resource-name>BookMarket</web-resource-name>
-      <url-pattern>/adminMain.jsp</url-pattern>
+      <url-pattern>/addProduct.jsp</url-pattern>
+      <url-pattern>/editProduct.jsp</url-pattern>
     </web-resource-collection>
     <auth-constraint>
       <description>권한 관리자명</description>
@@ -28,7 +24,76 @@
     <auth-method>FORM</auth-method>
     <form-login-config>
       <form-login-page>/login_admin.jsp</form-login-page>
-      <form-error-page>/login_admin.jsp</form-error-page>
+      <form-error-page>/login_failed.jsp</form-error-page>
     </form-login-config>
   </login-config>
+  <error-page>
+    <error-code>404</error-code>
+    <location>/exceptionNoPage.jsp</location>
+  </error-page>
+  <error-page>
+    <error-code>500</error-code>
+    <location>/exceptionServerErrorPage.jsp</location>
+  </error-page>
+  <filter>
+    <filter-name>LogFileFilter</filter-name>
+    <filter-class>filter.LogFileFilter</filter-class>
+    <init-param>
+      <param-name>filename</param-name>
+      <param-value>c:\\logs\\BookMarket.log</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>LogFileFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>BoardController</servlet-name>
+    <servlet-class>mvc.controller.BoardController</servlet-class>
+    <init-param>
+       <param-name>configFile</param-name>
+       <param-value>
+       /WEB-INF/commandHandlerURI.properties
+       </param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup> 
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardController</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BbsController</servlet-name>
+    <servlet-class>mvc.bbs.controller.BbsController</servlet-class>
+    <init-param>
+       <param-name>BbsconfigFile</param-name>
+       <param-value>
+       /WEB-INF/commandBbsURI.properties
+       </param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup> 
+   </servlet>
+  <servlet-mapping>
+    <servlet-name>BbsController</servlet-name>
+    <url-pattern>*.go</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>BbController</servlet-name>
+    <servlet-class>mvc.bb.controller.BbController</servlet-class>
+    <init-param>
+      <param-name>BbconfigFile</param-name>
+      <param-value>
+        /WEB-INF/commandBbURI.properties
+      </param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BbController</servlet-name>
+    <url-pattern>*.bo</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
