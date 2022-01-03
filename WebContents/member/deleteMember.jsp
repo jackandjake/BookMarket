@@ -6,13 +6,13 @@
 %>
 <%-- <%=sessionId%><br> --%>
 <sql:setDataSource  var="dataSource"  
-  url="jdbc:mysql://localhost:3306/Book" 
+  url="jdbc:mysql://localhost:3306/BookMarket" 
   driver="com.mysql.cj.jdbc.Driver"
   user="book"
   password="1234"/>
   
 <sql:update dataSource="${dataSource}" var="resultSet">
- delete from member where id=?
+ delete from member where cid=?
  <sql:param value="<%=sessionId%>"/>
 </sql:update>
 

@@ -6,7 +6,7 @@
 <title>Bbs</title>
 </head>
 <body>
-<jsp:include page="../me.jsp"/>
+<jsp:include page="../menu.jsp"/>
 <div class="jumbotron">
    <div class="container">
       <h1 class="display-3">Bbs</h1>
@@ -69,6 +69,6 @@
    </form>
 </div>
 
-<jsp:include page="../fo.jsp"/>
+<jsp:include page="../footer.jsp"/>
 </body>
 </html>

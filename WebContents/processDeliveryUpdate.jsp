@@ -6,7 +6,7 @@
 %>
 <jsp:useBean id="deliveryInfo" class="dto.Delivery"/>
 <jsp:setProperty property="*" name="deliveryInfo"/>
-<%@ include file="dbconnBook.jsp" %>
+<%@ include file="dbconn.jsp" %>
 <%
   String sql="update delivery set nickName=?,country=?,zipcode=?,roadAddress=?,jibunAddress=?,detailAddress=? where seq=?";
   PreparedStatement pstmt =conn.prepareStatement(sql);

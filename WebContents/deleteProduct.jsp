@@ -1,7 +1,7 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.sql.PreparedStatement"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ include file = "dbconnBook.jsp" %>
+<%@ include file = "dbconn.jsp" %>
 <%
 	String productId = request.getParameter("id");
 	PreparedStatement pstmt = null;
@@ -26,5 +26,5 @@
 	if(conn != null) conn.close();
 	
 	//페이지 이동
-	response.sendRedirect("editProduct_delete.jsp");
+	response.sendRedirect("editProduct.jsp?edit=delete");
 %>

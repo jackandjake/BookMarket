@@ -9,7 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-<%@ include file="../me.jsp" %>
+<%@ include file="menu.jsp" %>
 <div class="container mt-5">
 <div class="row">
 <div class="col-sm-1"></div>
@@ -38,12 +38,12 @@
 </div>
 <div align="center" class="container">
   <p><%=request.getRequestURL() %>?<%=request.getQueryString()%><!-- 요청페이지 경로명 -->
-  <p><a style ="color:while; background-color:DodgerBlue;" href="products.jsp" class="btn btn-secondary">목록으로 &raquo;</a>
+  <p><a style ="color:while; background-color:DodgerBlue;" href="./welcome.jsp" class="btn btn-secondary">Home &raquo;</a>
 </div>
 
 <pre>
 
 </pre>
-<%@ include file="/fo.jsp" %>
+<%@ include file="footer.jsp" %>
 </body>
 </html>

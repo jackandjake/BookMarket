@@ -10,10 +10,8 @@ Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-
 function chk(){
  var req = document.getElementById('req').checked;
-
  if(req){
   location.href='addMember.jsp'
  }else{
@@ -22,7 +20,7 @@ function chk(){
 }
 function nochk(){
  alert("동의하지 않으면 가입하실 수 없습니다");
-location.href="../wel.jsp";}
+location.href="../welcome.jsp";}
 </script>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
 <title>회원가입</title>
@@ -280,6 +278,6 @@ location.href="../wel.jsp";}
 <div class="col-sm-1"></div>
 </div>
 </div>
-<%@ include file="../fo.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>

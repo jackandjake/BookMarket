@@ -64,7 +64,7 @@ String password=request.getParameter("emailPassword").trim();
 	 msg.setFrom(from);//이메일 발신자
 	 InternetAddress to = new InternetAddress(email);//수신자
 	 msg.setRecipient(Message.RecipientType.TO, to);//수신자
-	 msg.setSubject("회원가입인증메일-WebMarket","UTF-8");//이메일 제목
+	 msg.setSubject("회원가입인증메일-BookMarket","UTF-8");//이메일 제목
 	 msg.setText(certString,"UTF-8");//이메일 내용
      msg.setHeader("content-Type", "text/html");//이메일 헤더
      //전송 처리

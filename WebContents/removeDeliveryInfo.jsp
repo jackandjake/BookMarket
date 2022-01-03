@@ -4,7 +4,7 @@
 	request.setCharacterEncoding("utf-8");
 	String seq = request.getParameter("seq");
 %>
-<%@ include file="dbconnBook.jsp" %>
+<%@ include file="dbconn.jsp" %>
 <%
   String sql="delete from delivery where seq = ?";
   PreparedStatement pstmt = conn.prepareStatement(sql);

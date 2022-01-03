@@ -8,7 +8,7 @@
 %>
 <%--데이타 셋 설정 --%>
 <sql:setDataSource  var="dataSource"   
-      url="jdbc:mysql://localhost:3306/book"
+      url="jdbc:mysql://localhost:3306/BookMarket"
       user="book" password="1234"
       driver="com.mysql.cj.jdbc.Driver" />
       

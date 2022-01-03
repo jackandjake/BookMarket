@@ -4,7 +4,7 @@
 <%@page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy"%>
 <%@page import="com.oreilly.servlet.MultipartRequest"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ include file="dbconnBook.jsp" %>
+<%@ include file="dbconn.jsp" %>
 <%
 request.setCharacterEncoding("UTF-8");
 //upload처리
@@ -42,15 +42,14 @@ String fileName = multi.getFilesystemName(fname);//전송되어서 서버로 넘
 PreparedStatement pstmt=null;
 if(fileName!=null){//수정된 파일이 전송된 경우
 	//상품수정
-	String sql ="update bookmarketdb.product set pname=?, pwriter=?, unitPrice=?, category=?, "
+	String sql ="update product set pname=?, pwriter=?, unitPrice=?, category=?, "
 			   +" publisher=?, publishDate=?, description=?, unitsInStock=?, "
 			   +" fileName=? where productId=?";
 	//값 설정
 	pstmt = conn.prepareStatement(sql);
-	
 	int i=0;
-    pstmt.setString(++i,pname);
-    pstmt.setString(++i,pwriter);
+	pstmt.setString(++i,pname);
+	pstmt.setString(++i,pwriter);
 	pstmt.setInt(++i,price);
 	pstmt.setString(++i,category);
 	pstmt.setString(++i,publisher);
@@ -63,20 +62,21 @@ if(fileName!=null){//수정된 파일이 전송된 경우
 	pstmt.executeUpdate();
 }else{//수정 이미지가 전송이 안된 경우
 	//상품수정
-	String sql ="update bookmarketdb.product set pname=?, pwriter=?, unitPrice=?, category=?, "
-			   +" publisher=?, publishDate=?, description=?, unitsInStock=? "
+	String sql ="update product set pname=?, pwriter=?, unitPrice=?, category=?, "
+			   +" publisher=?, publishDate=?, description=?, unitsInStock=?, "
 			   +" where productId=?";
 	//값 설정
 	pstmt = conn.prepareStatement(sql);
 	int i=0;
-    pstmt.setString(++i,pname);
-    pstmt.setString(++i,pwriter);
+	pstmt.setString(++i,pname);
+	pstmt.setString(++i,pwriter);
 	pstmt.setInt(++i,price);
 	pstmt.setString(++i,category);
 	pstmt.setString(++i,publisher);
 	pstmt.setString(++i,publishDate);
 	pstmt.setString(++i,description);
 	pstmt.setLong(++i,stock);
+	pstmt.setString(++i,fileName);
 	pstmt.setString(++i,productId);
 	
 	pstmt.executeUpdate();	
@@ -84,5 +84,5 @@ if(fileName!=null){//수정된 파일이 전송된 경우
 if(pstmt!=null) pstmt.close();
 if(conn!=null) conn.close();
 //Home으로 이동
-response.sendRedirect("wel.jsp");
+response.sendRedirect("welcome.jsp");
 %>

@@ -4,7 +4,7 @@
 <%@page import="dto.Product"%>
 <%@page import="dao.ProductRepository"%>
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ include file="dbconnBook.jsp" %>
+<%@ include file="dbconn.jsp" %>
 <%
    String id = request.getParameter("id"); 
 	//넘어온 파라미터가 없으면 welcome.jsp로 이동처리

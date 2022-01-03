@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <meta charset="UTF-8">
-<title>백두서점</title>
+<title>배송 정보</title>
 <script>
 function registerDelivery(){
   location.href="registerDelivery.jsp";	
@@ -20,9 +20,9 @@ function listDelivery(){
 </script>
 </head>
 <body>
-<jsp:include page="me.jsp" />
+<jsp:include page="menu.jsp" />
 
-<%@include file="dbconnBook.jsp" %>
+<%@include file="dbconn.jsp" %>
 <%
     String sql="select max(ifnull(seq,'')) seq ,max(ifnull(nickname,'')) nickName, "
               +" max(ifnull(country,'')) country, max(ifnull(zipcode,'')) zipcode, "
@@ -112,7 +112,7 @@ function listDelivery(){
 <pre>
 
 </pre> 
-<jsp:include page="fo.jsp"/>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>

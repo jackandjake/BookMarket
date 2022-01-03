@@ -43,7 +43,7 @@ if(cookies!=null){
 }
 %>
 
-<jsp:include page="me.jsp"/>
+<jsp:include page="menu.jsp"/>
 <div class="container mt-5">
 <div class="row">
 <div class="col-sm-1"></div>
@@ -53,7 +53,7 @@ if(cookies!=null){
 <pre>
 
 </pre>
-<div class="container" >
+<div class="container" align="center">
    <h2 class="alert alert-primary">주문해주셔서 감사합니다.</h2>
    <p> 주문은 <%=shipping_shippingDate %>에 배송될 예정입니다!
    <p> 주문번호: <%=shipping_cartId %>
@@ -93,6 +93,6 @@ for(int i=0;i<cookies.length;i++){
 	response.addCookie(thisCookie);
 }
 %> 
-<jsp:include page="fo.jsp"/>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

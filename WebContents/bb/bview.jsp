@@ -15,7 +15,7 @@ function confirmDelete(num,pageNum,items,text){
 </script>
 </head>
 <body>
-<%@ include file="../me.jsp" %>
+<%@ include file="../menu.jsp" %>
 <div class="container mt-5">
 <div class="row">
 <div class="col-sm-1"></div>
@@ -83,7 +83,7 @@ function confirmDelete(num,pageNum,items,text){
 <pre>
 
 </pre>
-<%@ include file="../fo.jsp" %>
+<%@ include file="../footer.jsp" %>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

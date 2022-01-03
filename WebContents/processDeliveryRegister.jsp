@@ -5,7 +5,7 @@
 %>
 <jsp:useBean id="deliveryInfo" class="dto.Delivery"/>
 <jsp:setProperty property="*" name="deliveryInfo"/>
-<%@ include file="dbconnBook.jsp" %>
+<%@ include file="dbconn.jsp" %>
 <%
   String sql="insert into delivery values(null,?,?,?,?,?,?)";
   PreparedStatement pstmt =conn.prepareStatement(sql);

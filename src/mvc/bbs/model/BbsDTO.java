@@ -96,6 +96,4 @@ public void setBad(int bad) {
 	this.bad = bad;
 }
  
- 
- 
 }

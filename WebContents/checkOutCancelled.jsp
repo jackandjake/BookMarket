@@ -8,7 +8,7 @@
 <script type="text.javascript" src="./resources/js/validation.js"></script>
 </head>
 <body>
-<jsp:include page="me.jsp"/>
+<jsp:include page="menu.jsp"/>
 <div class="jumbotron">
     <div class="container">
       <h1 class="display-3">주문 취소</h1>
@@ -20,6 +20,6 @@
  <div class="container">
   <p><a href="welcome.jsp" class="btn btn-secondary">&laquo; Home</a>
  </div>
-<jsp:include page="fo.jsp"/>
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

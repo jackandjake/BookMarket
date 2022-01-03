@@ -19,7 +19,8 @@ function checkForm(){
 <title>bbs</title>
 </head>
 <body>
-<jsp:include page="../me.jsp"/>
+<jsp:include page="../menu.jsp"/>
+<div class="jumbotron">
    <div class="container">
       <h1 class="display-3">bbs</h1>
    </div>
@@ -148,6 +149,6 @@ function checkForm(){
   </div>
 </div>
 
-<jsp:include page="../fo.jsp"/>
+<jsp:include page="../footer.jsp"/>
 </body>
 </html>

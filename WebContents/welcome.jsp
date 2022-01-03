@@ -15,7 +15,7 @@
 </style>
 </head>
 <body>
-<%@ include file="me.jsp" %>
+<%@ include file="menu.jsp" %>
 <div class="container" id="body">
 <div class="row">
 <div class="col-sm-1"></div>
@@ -252,6 +252,6 @@
  <div class="col-sm-1"></div>  
 </div>  
 </div>
-<%@ include file="fo.jsp" %>
+<%@ include file="footer.jsp" %>
 </body>
 </html>

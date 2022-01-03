@@ -15,7 +15,7 @@ function confirmDelete(num,pageNum,items,text){
 </script>
 </head>
 <body>
-<jsp:include page="../me.jsp"/>
+<jsp:include page="../menu.jsp"/>
 <div class="jumbotron">
    <div class="container">
      <h1 class="display-3">게시판</h1>
@@ -76,7 +76,7 @@ function confirmDelete(num,pageNum,items,text){
 	</div>
     <hr>
 </div>
-<jsp:include page="../fo.jsp"/>
+<jsp:include page="../footer.jsp"/>
 
 
 <!-- Modal -->

@@ -53,10 +53,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-<title>백두도서</title>
+<title>주문정보</title>
 </head>
 <body>
-<jsp:include page="me.jsp"/>
+<jsp:include page="menu.jsp"/>
 <div class="container mt-5">
 <div class="row">
 <div class="col-sm-1"></div>
@@ -74,7 +74,7 @@
             <div class="col-4" align="left">
                <strong>배송주소</strong><br>이름: <%=shipping_name%><br>
                우편번호: <%=shipping_zipCode %><br>
-               주소: <%=shipping_roadAddress %><%=shipping_detailAddress %><br>
+               주소: <%=shipping_roadAddress %> <%=shipping_detailAddress %><br>
             </div>
             <div class="col-4" align="right">
                 <p><em>예상 배송일: </em><%=shipping_shippingDate %></p>
@@ -115,18 +115,14 @@
       </table>
         
       <a href="./shippingInfo.jsp?cartId=<%=shipping_cartId%>" 
-                 class="btn btn-outline-secondary" role="button">이전</a>  
-      <a href="./removeSession.jsp" class="btn btn-outline-success" role="button">주문완료</a>
-      <a href="./checkOutCancelled.jsp" class="btn btn-outline-secondary" role="button">취소</a> 
+                 class="btn btn-secondary" role="button">이전</a>  
+      <a href="./thanksCustomer.jsp" class="btn btn-success" role="button">주문완료</a>
+      <a href="./checkOutCancelled.jsp" class="btn btn-secondary" role="button">취소</a> 
     </div>    
-</div>
-</div>
-<div class="col-sm-1"></div>
-</div>
 </div>
 <pre>
 
-</pre>
-<jsp:include page="fo.jsp"/>
+</pre> 
+<jsp:include page="footer.jsp"/>
 </body>
 </html>

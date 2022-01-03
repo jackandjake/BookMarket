@@ -10,7 +10,7 @@
 </style>
 </head>
 <body>
-<%@ include file="../me.jsp" %>
+<%@ include file="../menu.jsp" %>
 <div class="container mt-5">
 <div class="row">
 <div class="col-sm-1"></div>
@@ -32,6 +32,6 @@
 <pre>
 
 </pre>
-<%@ include file="../fo.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>
