@@ -1,8 +1,8 @@
 ## BookMarket_Gangnam Branch Room4 Team5 Project
->왕별도서 
+==
+왕별도서 
 ====
 구현했던 기능들
-==
 1. 회원가입, 로그인, 회원정보 변경하기
 2. 상품보기, 상세보기
 3. 상품 장바구니 담기
